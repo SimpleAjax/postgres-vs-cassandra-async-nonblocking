@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 1s # Scrape fast for this demo (default is usually 15s)
+
+scrape_configs:
+  - job_name: 'java_app'
+    static_configs:
+      # This points to your Java App running on Windows
+      - targets: ['host.docker.internal:8080', 'host.docker.internal:8081']
